@@ -66,9 +66,14 @@ form button:hover{
     font-size: 1rem;
 }
 .trash-btn{
-    background: rgb(236, 16, 82);
-    
+    background: rgb(236, 16, 82);  
 }
 .completed-btn{
     background: rgb(10, 206, 108);
+}
+.item{
+    padding: 0rem 0.5rem
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
 }
