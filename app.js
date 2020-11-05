@@ -10,20 +10,22 @@ button.addEventListener('click', addTodo);
 function addTodo(event){
     event.preventDefault();
     // creating todo div
-    const div = document.createElement('div');
-    div.classList.add('todo');
+    const tododiv = document.createElement('div');
+    tododiv.classList.add('todo');
     const newtodo = document.createElement('li');
     newtodo.innerText = 'HEY';
     newtodo.classList.add('item');
-    div.appendChild(newtodo);
+    tododiv.appendChild(newtodo);
     //check btn
     const completed = document.createElement('button');
     completed.innerHTML = '<i class="fa fa-check"></i>';
     completed.classList.add('completed-btn');
-    div.appendChild(completed);
+    tododiv.appendChild(completed);
     //trash btn
     const trash = document.createElement('button');
     trash.innerHTML = '<i class="fa fa-trash"></i>';
     trash.classList.add('trash-btn');
-    div.appendChild(trash);
+    tododiv.appendChild(trash);
+    //append
+    list.appendChild(tododiv);
 }
