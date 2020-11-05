@@ -38,4 +38,9 @@ function deltodo(e){
         const todo = item.parentElement;
         todo.remove();
     }
+    //checkmark
+    if(item.classList[0] == 'completed-btn'){
+        const todo = item.parentElement;
+        todo.classList.toggle('completed');
+    }
 }
