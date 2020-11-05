@@ -19,3 +19,22 @@ header, form{
     align-items: center;
     justify-content: center;
 }
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: transparent;
+}
+form input{
+    border: 2px solid #eee;
+    border-radius: 10px;
+}
+form button{
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: #eee;
+}
+form button:hover{
+    color: aquamarine;
+}
