@@ -13,7 +13,7 @@ function addTodo(event){
     const tododiv = document.createElement('div');
     tododiv.classList.add('todo');
     const newtodo = document.createElement('li');
-    newtodo.innerText = 'HEY';
+    newtodo.innerText = input.value;
     newtodo.classList.add('item');
     tododiv.appendChild(newtodo);
     //check btn
