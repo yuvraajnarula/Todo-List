@@ -63,6 +63,7 @@ function filtertodo(e){
                 else{
                     todo.style.display = 'none';
                 }
+                break;
             case 'Uncompleted':
                 if(!list.classList('completed')){
                     list.style.display = 'flex';
@@ -70,7 +71,20 @@ function filtertodo(e){
                 else{
                     todo.style.display = 'none';
                 }
+                break;
         }
     })
 }
 */
+ function saveTodos(todo){
+    //check
+    let todos;
+    if(localStorage.getItem('todos') == null){
+        todos = [];
+    }
+    else{
+        todos = JSON.parse(localStorage.getItem('todos'));
+    }
+    todos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(todos));
+ }
