@@ -7,9 +7,17 @@
 }
 body{
     background: black;
-    color: aquamarine;
+    color: white;
+    background: linear-gradient(132deg, #e00a52, #1665c1);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 30s ease infinite;
     min-height: 100vh;
 }
+@keyframes BackgroundGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
 header{
     font-size: 1.5rem;
 }
@@ -37,7 +45,7 @@ form button{
     color: #eee;
 }
 form button:hover{
-    color: aquamarine;
+    color: #eee;
 }
 .todo-container{
     display: flex;
@@ -50,10 +58,12 @@ form button:hover{
 }
 .todo{
     margin: 0.5rem;
-    background: coral;
-    color: black;
+    background: rgb(18, 18, 19);
+    color: white;
     font-size: 1.5rem;
     display: flex;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0,0,0,.5);
     justify-content: space-between;
     transition: all 1s ease;
 }
@@ -69,9 +79,13 @@ form button:hover{
 }
 .trash-btn{
     background: rgb(236, 16, 82);  
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 .completed-btn{
     background: rgb(10, 206, 108);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .item{
     padding: 0rem 0.5rem
@@ -84,6 +98,6 @@ form button:hover{
     opacity: 0.5;
 }
 .fall{
-    transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+    transition: all 2s;
 }
